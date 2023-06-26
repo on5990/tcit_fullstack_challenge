@@ -1,0 +1,16 @@
+@use "../variables/variables" as var;
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+  color: var.$btn-color;
+  background-color: var.$btn-bg-color-1;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+.btn:hover {
+  background-color: var.$btn-bg-color-1-hover;
+}
+.btn:active {
+  background-color: var.$btn-bg-color-1-active;
+}

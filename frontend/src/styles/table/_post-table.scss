@@ -1,0 +1,72 @@
+@use "../variables/variables" as var;
+.post-table {
+  color: var.$paragraph-color;
+  border-spacing: 0.3rem;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.post-table td,
+th {
+  padding: 0.8rem;
+  border: 1px solid var.$dashboard-bg-color;
+}
+.post-table p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+  text-align: justify;
+}
+.post-table th {
+  background-color: var.$table-thead-bg-color;
+  color: var.$table-th-color;
+}
+.post-table th:first-child {
+  border-radius: 5px 0 0 0;
+}
+.post-table th:last-child {
+  border-radius: 0 5px 0 0;
+}
+.post-table td:last-child {
+  position: relative;
+  color: var.$post-delete-color;
+}
+.post-table td:last-child p {
+  cursor: pointer;
+}
+.post-table td:last-child p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.post-table tr:nth-child(even) {
+  background-color: var.$table-td-bg-color-even;
+}
+.post-table tr:nth-child(odd) {
+  background-color: var.$table-td-bg-color-odd;
+}
+.delete-post-p {
+  display: none;
+}
+.post-description-visibility {
+  cursor: pointer;
+  color: var.$post-span-color;
+}
+.post-description-visibility:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: (var.$med-breakpoint - 1px)) {
+  .post-table {
+    font-size: 0.6rem;
+  }
+  .post-table p {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: var.$change-delete-breakpoint) {
+  .delete-post-p {
+    display: inline;
+  }
+}

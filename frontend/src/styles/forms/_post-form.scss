@@ -1,0 +1,72 @@
+@use "../variables/variables" as var;
+.post-form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.post-form label {
+  margin-bottom: 0.2rem;
+  color: var.$paragraph-color;
+  font-size: 1.2rem;
+}
+.post-form textarea {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 3px;
+  opacity: 90%;
+  resize: vertical;
+}
+.post-form textarea::placeholder {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.post-form .textarea-small {
+  height: 2.5rem;
+}
+.post-form .textarea-large {
+  height: 6rem;
+}
+.post-form textarea:focus {
+  outline: none;
+}
+.post-form textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.post-form button {
+  align-self: center;
+}
+.input-error {
+  border: 1px solid red;
+  box-shadow: 0px 0px 5px 1px red;
+}
+@media screen and (min-width: var.$med-breakpoint) {
+  .post-form {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .post-form textarea {
+    margin-bottom: 0;
+  }
+  .post-form .textarea-small {
+    width: 25%;
+    height: auto;
+  }
+  .post-form .textarea-large {
+    width: 58%;
+    height: auto;
+  }
+}
+@media screen and (min-width: var.$large-breakpoint) {
+  .post-form .textarea-small {
+    width: 28%;
+  }
+  .post-form .textarea-large {
+    width: 60%;
+  }
+}

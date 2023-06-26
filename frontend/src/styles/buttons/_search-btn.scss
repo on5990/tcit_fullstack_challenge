@@ -1,0 +1,18 @@
+@use "../variables/variables" as var;
+.search-btn {
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+@media screen and (min-width: var.$med-breakpoint) {
+  .search-btn {
+    width: 35%;
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: var.$large-breakpoint) {
+  .search-btn {
+    width: 20%;
+  }
+}

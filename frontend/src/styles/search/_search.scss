@@ -1,0 +1,30 @@
+@use "../variables/variables" as var;
+.search {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.input-search {
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem;
+  opacity: 90%;
+}
+.input-search:focus {
+  outline: none;
+}
+.input-search::placeholder {
+  font-weight: bold;
+  font-size: 1rem;
+}
+@media screen and (min-width: var.$med-breakpoint) {
+  .search {
+    flex-flow: row wrap;
+  }
+  .input-search {
+    width: 40%;
+  }
+}
